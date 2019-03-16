@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo "Building the project:"
+nix-build
+
+echo "Contents of ./result/output/Main/index.js:"
+cat ./result/output/Main/index.js
+
+node -e "require('./result/output/Main').main()"
